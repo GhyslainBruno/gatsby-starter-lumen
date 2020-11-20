@@ -1,0 +1,461 @@
+/* Global styles */
+
+/* html is set to 62.5% so that all the REM measurements
+throughout are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+	font-size: 62.5%;
+	height: 100%;
+	/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+::selection {
+	color: $textSelection;
+	background: $textSelectionBg;
+}
+
+/*
+* kill document defaults margin & padding. We all do that all the time, right ?
+*/
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 14px;
+}
+
+/*
+* page styles
+*/
+html {
+	min-height: 100%;
+	background: #fff;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+body {
+	font-size: $fontSize;
+	line-height: 26px;
+	/* system font https://medium.com/designing-medium/system-shock-6b1dc6d6596f */
+	font-family: "benton-sans", sans-serif;
+	/*font-family: 'proxima-nova', 'Helvetica', sans-serif;*/
+	color: rgba(0,0,0,0.80);
+	font-weight: 500;
+}
+
+/**
+* Typography
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+}
+h1 { font-size: 3.0rem; line-height: 1.2; letter-spacing: -.05rem;}
+h2 { font-size: 2.5rem; line-height: 1.25; letter-spacing: -.03rem; }
+h3 { font-size: 2.0rem; line-height: 1.3;  letter-spacing: -.025rem; }
+h4 { font-size: 1.8rem; line-height: 1.35; letter-spacing: -.02rem; }
+h5 { font-size: 1.6rem; line-height: 1.5;  letter-spacing: -.02rem; }
+h6 { font-size: 1.2rem; line-height: 1.6;  letter-spacing: 0; }
+p {
+	letter-spacing: 0;
+	margin-bottom: 24px;
+}
+blockquote p {
+	margin-bottom: 14px;
+}
+strong {
+	color: #000;
+}
+/**
+ * Image alignment
+ * @type {[type]}
+ */
+.alignright {
+  float: right;
+  margin-left: 20px;
+}
+img[align="left"] {
+  margin-right: 20px;
+}
+img[align="right"] {
+  margin-left: 20px;
+}
+.right {
+  float: right;
+  margin-left: 35px;
+}
+.left {
+  float: left;
+  margin-right: 35px;
+}
+
+.center, .aligncenter {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+/**
+ * Elements
+ */
+
+$tableGray1: #828282;
+table {
+  max-width: 960px;
+  margin: 10px 0;
+}
+
+caption {
+  font-size: 1.6em;
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+thead th {
+  font-weight: 400;
+  background: $tableGray1;
+  color: #FFF;
+}
+
+tr {
+  background: #e3e3e3;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 5px;
+}
+
+tr:nth-child(even) {
+  background: #f3f3f3;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  font-weight: 300;
+}
+td ul {
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+  li {
+    word-wrap: break-word;
+  }
+}
+
+tfoot tr {
+  background: none;
+}
+
+tfoot td {
+  padding: 10px 2px;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #8a97a0;
+}
+
+blockquote {
+  display: inline-block;
+  padding-left: 18px;
+  padding-bottom: 0;
+  font-size: 15px;
+  line-height: 25px;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-left: 10px solid #0685c4;
+}
+
+blockquote ul {
+  list-style: none;
+  li {
+    font-style: italic;
+    font-weight: 700;
+  }
+}
+
+hr {
+  border-color: rgba(227, 227, 227, 0.33);
+  border-width: 0.5px;
+}
+
+#disqus_thread {
+  margin-left: 15px;
+}
+
+.anchor {
+	text-decoration: none;
+	border-bottom: none !important;
+}
+/**
+ * Code highlighting
+ */
+.gatsby-highlight pre code {
+  padding-left: 52px;
+  font-size: 1.5rem;
+  position: relative;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+details .gatsby-highlight {
+	margin-left: -$contentPadding;
+}
+pre code {
+  display:block;
+  background:white;
+  padding:0.5em;
+  color: #333333;
+  overflow-x:auto;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+}
+.gatsby-highlight pre code {
+  &:before {
+    position: absolute;
+    right:0;
+    top:5px;
+    padding: 0 0.5em;
+    color: rgba(0, 0, 0, 0.32);
+    font-size: 0.9em;
+  }
+  &.language-js:before {
+    content: 'JavaScript';
+  }
+  &.language-css:before {
+    content: 'CSS';
+  }
+  &.language-yml:before, .language-yaml:before {
+    content: 'YAML';
+  }
+}
+pre.language-javascript, pre.language-yml, pre.language-css {
+  code:before {
+    position: absolute;
+    right:0;
+    top:5px;
+    padding: 0 0.5em;
+    color: rgba(0, 0, 0, 0.32);
+    font-size: 0.9em;
+  }
+}
+pre.language-javascript, pre.language-yml, pre.language-css {
+  code:before {
+    content: 'javascript';
+  }
+}
+pre.language-yml, pre.language-css {
+  code:before {
+    content: 'yaml';
+  }
+}
+pre.language-css {
+  code:before {
+    content: 'css';
+  }
+}
+
+/**
+ * prism.js theme
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #005cc5;
+  background: none;
+  text-shadow: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #eff1f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+}
+
+code, :not(pre)>code[class=language-text] {
+  display: inline-block;
+  padding: 3px 5px;
+  color: #e91e63;
+  font-size: 13px;
+  background: rgba(0,0,0,0.04);
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999988;
+}
+
+.token.comment {
+	color: #7f7f71;
+	text-shadow: none;
+}
+
+.token.namespace {
+  opacity: .7;
+}
+
+.token.string,
+.token.attr-value {
+  color: #032f62;
+}
+.token.punctuation,
+.token.operator {
+  color: #393A34; /* no highlight */
+}
+
+.token.entity,
+.token.url,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.variable,
+.token.constant,
+.token.property,
+.token.regex,
+.token.inserted {
+  color: #36acaa;
+}
+
+.token.atrule,
+.token.keyword,
+.token.attr-name,
+.language-autohotkey .token.selector {
+  color: #00a4db;
+}
+
+
+.token.keyword {
+	color: #d73a49;
+}
+.token.function {
+	color: #6f42c1;
+}
+
+
+.token.deleted,
+.language-autohotkey .token.tag {
+  color: #9a050f;
+}
+
+.token.tag,
+.token.selector,
+.language-autohotkey .token.keyword {
+  color: #00009f;
+}
+
+.token.important,
+.token.function,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+@media (max-width: 960px) {
+  .gatsby-highlight {
+    margin-left: -$mobileContentPadding;
+    margin-right: -$mobileContentPadding;
+  }
+	details .gatsby-highlight {
+		margin-left: -20px;
+	}
+}
+
+@media (max-width: 768px) {
+	body, blockquote {
+		font-size: 1.5rem;
+		line-height: 23px;
+	}
+	code, :not(pre)>code[class=language-text] {
+	  font-size: 12px;
+	}
+	.lets-talk {
+		display: block;
+	}
+	#disqus_thread {
+		margin-left: 0px;
+	}
+  .gatsby-highlight pre code {
+    font-size: 1.3rem;
+    padding-left: 20px;
+    &:before {
+      display: none;
+    }
+  }
+  .right {
+    float: none;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .left {
+    float: none;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  img[align="left"] {
+    margin-right: 0px;
+  }
+  img[align="right"] {
+    margin-left: 0px;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["prettier", "airbnb"],
+  "plugins": ["import", "jsx-a11y", "react"],
+  "globals": {
+    "graphql": true
+  },
+  "rules": {
+    "arrow-body-style": "off",
+    "jsx-quotes": ["error", "prefer-single"],
+    "arrow-parens": "off",
+    "comma-dangle": "off",
+    "object-curly-newline": "off",
+    "function-paren-newline": "off",
+    "no-console": "off",
+    "prefer-destructuring": "off",
+    "semi": ["error", "never"],
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/jsx-filename-extension": "off",
+    "react/prefer-stateless-function": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/forbid-prop-types": "off",
+    "no-use-before-define": "off"
+  }
+}

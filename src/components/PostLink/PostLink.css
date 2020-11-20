@@ -1,0 +1,51 @@
+
+.postLink {
+  padding-left: $contentPadding;
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 20px;
+  border-top: 1px solid #e2e2e2;
+  overflow-x: hidden;
+  &:first-of-type {
+    border-top: none;
+  }
+  a {
+    color: #464646;
+    text-decoration: none;
+  }
+}
+.meta {
+  font-size: 12px;
+  color: #717171;
+}
+.categoryLink {
+  margin-left: 20px;
+}
+.externalLink {
+  margin-left: 5px;
+}
+.location {
+  display: inline-block;
+  margin-left: 5px;
+}
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0px;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .postLink {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .meta {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,60 @@
+.page {
+  padding: $contentPadding;
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(100, 100, 100, 0.67);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .text {
+    color: white;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin-bottom: 25%;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.27);
+  }
+}
+.form {
+  position: relative;
+  max-width: 650px;
+  label {
+    display: none;
+  }
+  textarea {
+    font-family: "benton-sans", sans-serif;
+  }
+}
+
+.fieldSet {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 900px) {
+  .form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 830px) {
+  .page {
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 80px;
+  }
+  .button button {
+    width: 100%;
+  }
+  .text {
+    font-size: 28px;
+  }
+  .form textarea {
+    font-size: 16px;
+
+  }
+}
