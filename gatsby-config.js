@@ -47,7 +47,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-feed',
       options: {
-        title: "David Wells Blog RSS Feed",
+        title: 'David Wells Blog RSS Feed',
         query: `
           {
             site {
@@ -140,5 +140,6 @@ module.exports = {
     /* 'gatsby-plugin-offline', // Service workers are bad kill them with 🔥 */
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-netlify-cms'
   ],
 }
